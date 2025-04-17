@@ -1,0 +1,174 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --black: rgba(32, 32, 32, 1);
+  --body-paragraph-font-family: "Barlow", Helvetica;
+  --body-paragraph-font-size: 14px;
+  --body-paragraph-font-style: normal;
+  --body-paragraph-font-weight: 400;
+  --body-paragraph-lead-font-family: "Barlow", Helvetica;
+  --body-paragraph-lead-font-size: 16px;
+  --body-paragraph-lead-font-style: normal;
+  --body-paragraph-lead-font-weight: 400;
+  --body-paragraph-lead-letter-spacing: 0px;
+  --body-paragraph-lead-line-height: normal;
+  --body-paragraph-letter-spacing: 0px;
+  --body-paragraph-line-height: 26px;
+  --body-paragraph-small-font-family: "Barlow", Helvetica;
+  --body-paragraph-small-font-size: 12px;
+  --body-paragraph-small-font-style: normal;
+  --body-paragraph-small-font-weight: 400;
+  --body-paragraph-small-letter-spacing: 0px;
+  --body-paragraph-small-line-height: 18px;
+  --heading-heading-1-font-family: "Barlow", Helvetica;
+  --heading-heading-1-font-size: 32px;
+  --heading-heading-1-font-style: normal;
+  --heading-heading-1-font-weight: 600;
+  --heading-heading-1-letter-spacing: 0px;
+  --heading-heading-1-line-height: normal;
+  --heading-heading-3-font-family: "Barlow", Helvetica;
+  --heading-heading-3-font-size: 21px;
+  --heading-heading-3-font-style: normal;
+  --heading-heading-3-font-weight: 500;
+  --heading-heading-3-letter-spacing: 0px;
+  --heading-heading-3-line-height: normal;
+  --heading-heading-4-font-family: "Barlow", Helvetica;
+  --heading-heading-4-font-size: 18px;
+  --heading-heading-4-font-style: normal;
+  --heading-heading-4-font-weight: 500;
+  --heading-heading-4-letter-spacing: 0px;
+  --heading-heading-4-line-height: normal;
+  --heading-heading-5-font-family: "Barlow", Helvetica;
+  --heading-heading-5-font-size: 15px;
+  --heading-heading-5-font-style: normal;
+  --heading-heading-5-font-weight: 500;
+  --heading-heading-5-letter-spacing: 0px;
+  --heading-heading-5-line-height: 24px;
+  --heading-heading-6-font-family: "Barlow", Helvetica;
+  --heading-heading-6-font-size: 14px;
+  --heading-heading-6-font-style: normal;
+  --heading-heading-6-font-weight: 500;
+  --heading-heading-6-letter-spacing: 0px;
+  --heading-heading-6-line-height: 23px;
+  --light-theme-colorbody: rgba(70, 66, 85, 1);
+  --light-theme-colordanger: rgba(255, 91, 91, 1);
+  --light-theme-colorgrey-2: rgba(243, 242, 247, 1);
+  --light-theme-colorgrey-6: rgba(163, 163, 163, 1);
+  --light-theme-colorlight: rgba(253, 253, 253, 1);
+  --light-theme-colorsuccess: rgba(0, 163, 137, 1);
+  --light-theme-colorwhite: rgba(255, 255, 255, 1);
+  --shadow-01: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  --shadow-02: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+  --theme-colordanger: rgba(255, 91, 91, 1);
+  --theme-colordark: rgba(70, 66, 85, 1);
+  --theme-colorgrey-2: rgba(243, 242, 247, 1);
+  --theme-colorgrey-3: rgba(208, 214, 222, 1);
+  --theme-colorgrey-4: rgba(185, 187, 189, 1);
+  --theme-colorgrey-5: rgba(163, 163, 163, 1);
+  --theme-colorgrey-body: rgba(70, 66, 85, 1);
+  --theme-colorinfo: rgba(45, 156, 219, 1);
+  --theme-colormenu: rgba(94, 108, 147, 1);
+  --theme-colorprimary: rgba(0, 176, 116, 1);
+  --theme-colorquantinery: rgba(45, 156, 219, 1);
+  --theme-colorsuccess: rgba(0, 176, 116, 1);
+  --theme-colortertiary: rgba(242, 245, 243, 1);
+  --theme-colorwarning: rgba(247, 198, 4, 1);
+  --theme-colorwhite: rgba(255, 255, 255, 1);
+  --transparencydanger: rgba(255, 91, 91, 0.15);
+  --transparencyprimary: rgba(0, 176, 116, 0.15);
+  --transparencyquantinery: rgba(45, 156, 219, 0.15);
+  --transparencysuccess: rgba(0, 176, 116, 0.15);
+  --transparent-color-danger: rgba(255, 91, 91, 0.15);
+  --transparent-color-success: rgba(46, 214, 163, 0.15);
+  --white: rgba(255, 255, 255, 1);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
