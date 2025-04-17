@@ -1,5 +1,5 @@
 import { CalendarIcon, ChevronDownIcon } from "lucide-react";
-import React from "react";
+// import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const DashboardStatsSection = (): JSX.Element => {
@@ -7,7 +7,7 @@ export const DashboardStatsSection = (): JSX.Element => {
     <div className="w-full py-6 px-4">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="font-heading-heading-1 text-theme-colordark text-[length:var(--heading-heading-1-font-size)] font-[number:var(--heading-heading-1-font-weight)] tracking-[var(--heading-heading-1-letter-spacing)] leading-[var(--heading-heading-1-line-height)] [font-style:var(--heading-heading-1-font-style)]">
+          <h1 className="font-heading-heading-1 text-theme-colordark text-[length:var(--heading-heading-2-font-size)] font-[number:var(--heading-heading-2-font-weight)] tracking-[var(--heading-heading-2-letter-spacing)] leading-[var(--heading-heading-2-line-height)] [font-style:var(--heading-heading-2-font-style)]">
             Dashboard
           </h1>
           <p className="mt-2 font-heading-heading-4 text-theme-colorgrey-5 text-[length:var(--heading-heading-4-font-size)] font-[number:var(--heading-heading-4-font-weight)] tracking-[var(--heading-heading-4-letter-spacing)] leading-[var(--heading-heading-4-line-height)] [font-style:var(--heading-heading-4-font-style)]">
@@ -18,7 +18,7 @@ export const DashboardStatsSection = (): JSX.Element => {
         <Card className="shadow-[0px_4px_4px_#0000000a] rounded-xl">
           <CardContent className="flex items-center p-3 gap-3">
             <div className="w-12 h-12 bg-transparencyquantinery rounded-[15px] flex items-center justify-center">
-              <CalendarIcon className="w-[34px] h-[34px] text-theme-colorquantinery" />
+              <CalendarIcon className="w-6 h-6 text-theme-colorquantinery" />
             </div>
 
             <div>

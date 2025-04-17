@@ -33,6 +33,12 @@
   --heading-heading-1-font-weight: 600;
   --heading-heading-1-letter-spacing: 0px;
   --heading-heading-1-line-height: normal;
+  --heading-heading-2-font-family: "Barlow", Helvetica;
+  --heading-heading-2-font-size: 28px;
+  --heading-heading-2-font-style: normal;
+  --heading-heading-2-font-weight: 600;
+  --heading-heading-2-letter-spacing: 0px;
+  --heading-heading-2-line-height: normal;
   --heading-heading-3-font-family: "Barlow", Helvetica;
   --heading-heading-3-font-size: 21px;
   --heading-heading-3-font-style: normal;

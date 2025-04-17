@@ -20,7 +20,7 @@ export const PieChartSection = (): JSX.Element => {
       percentage: "22%",
       imageSrc: "/circle-1.svg",
       backgroundImageSrc: "/circle-2.svg",
-      imageClassName: "w-[75px] h-[74px] left-[76px] absolute top-0",
+      imageClassName: "w-[75px] h-[74px] left-1/2 -translate-x-1/2 absolute top-0",
     },
     {
       id: 3,
@@ -28,38 +28,38 @@ export const PieChartSection = (): JSX.Element => {
       percentage: "62%",
       imageSrc: "/circle.svg",
       backgroundImageSrc: "/circle-2.svg",
-      imageClassName: "w-[130px] h-[153px] left-[23px] absolute top-0",
+      imageClassName: "w-[130px] h-[153px] left-1/2 -translate-x-1/2 absolute top-0",
     },
   ];
 
   return (
-    <Card className="w-full relative bg-[url(/background-1.svg)] bg-[100%_100%]">
-      <CardContent className="p-8">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="font-bold text-2xl text-theme-colorgrey-body">
+    <Card className="w-full relative bg-[url(/background-1.svg)] bg-cover bg-center">
+      <CardContent className="p-2 lg:p-4">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 lg:gap-4 mb-4">
+          <h2 className="font-bold text-base lg:text-xl text-theme-colorgrey-body">
             Pie Chart
           </h2>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-3">
-              <Checkbox id="chart" className="w-6 h-6 rounded-sm" />
+          <div className="flex flex-wrap items-center gap-2 lg:gap-4">
+            <div className="flex items-center gap-2">
+              <Checkbox id="chart" className="w-4 h-4 lg:w-5 lg:h-5 rounded-sm" />
               <label
                 htmlFor="chart"
-                className="font-semibold text-lg text-theme-colorgrey-body cursor-pointer"
+                className="font-semibold text-sm lg:text-base text-theme-colorgrey-body cursor-pointer whitespace-nowrap"
               >
                 Chart
               </label>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <Checkbox
                 id="showValue"
-                className="w-6 h-6 rounded-sm"
+                className="w-4 h-4 lg:w-5 lg:h-5 rounded-sm"
                 defaultChecked
               />
               <label
                 htmlFor="showValue"
-                className="font-semibold text-lg text-theme-colorgrey-body cursor-pointer"
+                className="font-semibold text-sm lg:text-base text-theme-colorgrey-body cursor-pointer whitespace-nowrap"
               >
                 Show Value
               </label>
@@ -68,34 +68,35 @@ export const PieChartSection = (): JSX.Element => {
             <Button
               variant="outline"
               size="icon"
-              className="w-[38px] h-[38px] rounded-xl border-white"
+              className="w-8 h-8 lg:w-9 lg:h-9 rounded-xl border-white"
             >
-              <MoreVerticalIcon className="h-6 w-6 text-theme-colorgrey-5" />
+              <MoreVerticalIcon className="h-4 w-4 lg:h-5 lg:w-5 text-theme-colorgrey-5" />
             </Button>
           </div>
         </div>
 
-        <div className="flex justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
           {chartData.map((chart) => (
             <div key={chart.id} className="flex flex-col items-center">
               <div
-                className="relative w-[153px] h-[153px] bg-[100%_100%]"
+                className="relative w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${chart.backgroundImageSrc})` }}
               >
                 <img
                   className={
                     chart.imageClassName ||
-                    "absolute w-[153px] h-[153px] top-0 left-0"
+                    "absolute w-full h-full top-0 left-1/2 -translate-x-1/2"
                   }
                   alt="Circle"
                   src={chart.imageSrc}
                 />
-                <div className="absolute w-[82px] h-[82px] top-[35px] left-[35px] bg-[#ffffff] rounded-[41.14px] shadow-[0px_17px_35px_#0000001f]" />
-                <div className="absolute top-16 left-[59px] font-semibold text-xl text-black whitespace-nowrap">
-                  {chart.percentage}
+                <div className="absolute w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-[0px_17px_35px_#0000001f] flex items-center justify-center">
+                  <div className="font-semibold text-base lg:text-lg text-black">
+                    {chart.percentage}
+                  </div>
                 </div>
               </div>
-              <p className="mt-6 font-semibold text-lg text-center text-theme-colorgrey-body">
+              <p className="mt-3 font-semibold text-sm lg:text-base text-center text-theme-colorgrey-body">
                 {chart.title}
               </p>
             </div>
