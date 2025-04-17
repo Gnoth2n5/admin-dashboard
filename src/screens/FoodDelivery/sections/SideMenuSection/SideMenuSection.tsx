@@ -14,17 +14,9 @@ import {
 } from "lucide-react";
 import React from "react";
 
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
-
 export const SideMenuSection = (): JSX.Element => {
-  // Navigation menu items data
   const menuItems = [
-    {
-      icon: <LayoutDashboardIcon className="w-4 h-4" />,
-      label: "Dashboard",
-      active: true,
-    },
+    { icon: <LayoutDashboardIcon className="w-4 h-4" />, label: "Dashboard" },
     { icon: <ClipboardListIcon className="w-4 h-4" />, label: "Order List" },
     { icon: <FileTextIcon className="w-4 h-4" />, label: "Order Detail" },
     { icon: <UsersIcon className="w-4 h-4" />, label: "Customer" },
@@ -38,13 +30,15 @@ export const SideMenuSection = (): JSX.Element => {
     { icon: <WalletIcon className="w-4 h-4" />, label: "Wallet" },
   ];
 
+  const [activeIndex, setActiveIndex] = React.useState(0); // mặc định là Dashboard
+
   return (
     <aside className="w-full h-full bg-white">
       <div className="h-full relative">
         {/* Logo and Brand */}
         <div className="px-6 pt-6 pb-4">
           <div className="font-['Poppins',Helvetica] font-bold text-2xl">
-            <span className="text-[#333333]">Sedap</span>
+            <span className="text-gray-600">Sedap</span>
             <span className="text-theme-colorsuccess">.</span>
           </div>
           <div className="font-heading-heading-4 text-theme-colorgrey-4 mt-1 text-sm">
@@ -54,45 +48,35 @@ export const SideMenuSection = (): JSX.Element => {
 
         {/* Navigation Menu */}
         <nav className="mt-6">
-          {menuItems.map((item, index) => (
-            <div key={index} className="relative">
-              {item.active && (
-                <div className="absolute w-1 h-8 top-[2px] left-0 bg-theme-colorsuccess rounded-[58px]" />
-              )}
-              <div
-                className={`flex items-center gap-4 py-0.5 px-6 h-10 ${
-                  item.active ? "bg-transparencysuccess rounded-lg" : ""
-                }`}
-              >
-                {item.icon}
+          {menuItems.map((item, index) => {
+            const isActive = activeIndex === index;
+
+            return (
+              <div key={index} className="relative">
+                {isActive && (
+                  <div className="absolute w-1 h-8 top-[2px] left-0 bg-theme-colorsuccess rounded-md" />
+                )}
                 <div
-                  className={`font-heading-heading-4 text-sm ${
-                    item.active
-                      ? "font-bold text-theme-colorprimary"
-                      : "text-theme-colordark"
-                  }`}
+                  onClick={() => setActiveIndex(index)}
+                  className={`flex items-center gap-4 py-0.5 px-6 h-10 ${
+                    isActive ? "bg-transparencysuccess rounded-lg" : ""
+                  } hover:bg-theme-colorgrey-2 rounded-lg transition-all duration-300 cursor-pointer`}
                 >
-                  {item.label}
+                  {item.icon}
+                  <div
+                    className={`font-heading-heading-4 text-sm ${
+                      isActive
+                        ? "font-bold text-theme-colorprimary"
+                        : "text-theme-colordark"
+                    }`}
+                  >
+                    {item.label}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </nav>
-
-        {/* Add Menu Card */}
-        <Card className="mx-4 mt-6 bg-theme-colorsuccess text-white">
-          <CardContent className="p-3">
-            <p className="text-xs mb-2">
-              Please organize your menus through button below:
-            </p>
-            <Button
-              variant="outline"
-              className="bg-white text-theme-colorsuccess hover:bg-white/90 w-full text-xs h-8"
-            >
-              + Add Menus
-            </Button>
-          </CardContent>
-        </Card>
       </div>
     </aside>
   );
